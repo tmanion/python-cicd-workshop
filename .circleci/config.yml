@@ -44,11 +44,14 @@ jobs:
       # other common Python testing frameworks include pytest and nose
       # https://pytest.org
       # https://nose.readthedocs.io
+#      - run:
+#          name: run tests
+#          command: |
+#            . venv/bin/activate
+#            python manage.py test
       - run:
-          name: run tests
-          command: |
-            . venv/bin/activate
-            python manage.py test
+          name: Run Tests
+          command: ~/.local/bin/pytest
 
       - store_artifacts:
           path: test-reports
